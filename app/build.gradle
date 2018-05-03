@@ -25,8 +25,25 @@ android {
         versionName "1.0"
         targetSdkVersion 26
     }
+
     productFlavors {
     }
+    signingConfigs {
+        release {
+            storeFile file("C:\\Users\\jayasimha.mudduluru\\keystore\\androidkstore.jks")
+            storePassword "Mjsimha9@"
+            keyAlias "key9"
+            keyPassword "Mjsimha9@"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+
+
     buildToolsVersion '26.0.2'
 }
 
